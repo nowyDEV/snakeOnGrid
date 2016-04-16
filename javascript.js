@@ -10,6 +10,7 @@ $(document).ready(function () {
     $('body').on('click', 'button', function () {
         var difficulty = $('select#difficulty').val();
         score = 0;
+        dir = 1;
 
         if (difficulty === 'Easy') {
             snake = ['7_7', '8_7'];
@@ -157,25 +158,18 @@ $(document).ready(function () {
 
     //User input check (snake arrow control)
     $(document).keydown(function(event){
-        switch(event.keyCode) {
-            case 37: // Left-arrow
+            if (event.keyCode == 37 && dir != 4) { //Left arrow
                 dir = 2;
-                break;
-            case 38: // Up-arrow
+            }
+            else if (event.keyCode == 38 && dir != 1) { //Up arrow
                 dir = 3;
-                break;
-            case 39: // Right-arrow
+            }
+            else if (event.keyCode == 39 && dir != 2) { //Right arrow
                 dir = 4;
-                break;
-            case 40: // Down-arrow
+            }
+            else if (event.keyCode == 40 && dir != 3) { //Down arrow
                 dir = 1;
-                break;
-
-        }
-
-    });
-
-
-
-
+            }
+        });
+    
 });
