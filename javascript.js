@@ -126,7 +126,6 @@ $(document).ready(function () {
                 break;
             default:
                 break;
-
         }
 
         //Head update
@@ -161,6 +160,8 @@ $(document).ready(function () {
         setTimeout(function(){ snakeMove()}, speed);
     }
 
+
+
     //User input check (snake arrow control)
     $(document).keydown(function(event){
             if (event.keyCode == 37 && dir != 4) { //Left arrow
@@ -175,6 +176,10 @@ $(document).ready(function () {
             else if (event.keyCode == 40 && dir != 3) { //Down arrow
                 dir = 1;
             }
+            else if (event.keyCode == 32) { //Space pause
+                prompt("Game paused, press Enter to continue");
+                }
+
         });
 
 });
