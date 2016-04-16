@@ -1,0 +1,40 @@
+#wrapper {
+    width: 600px;
+    margin: 15px auto;
+    background-color: #666;
+}
+
+.square {
+background-color: red;
+float: left;
+outline: black solid thin;
+}
+
+#panel {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.btn-start {
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    background-color: blue;
+    color: #ffffff;
+}
+
+.difficulty {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.drink {
+    background: url('piwo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.snake {
+    background: #fff;
+}
