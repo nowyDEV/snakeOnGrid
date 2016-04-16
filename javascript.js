@@ -87,8 +87,14 @@ $(document).ready(function () {
     function createDrink(size){
         var x = Math.floor(Math.random() * (size - 1)),
             y = Math.floor(Math.random() * (size - 1));
-        $('#xy_' + x + '_' + y).addClass('drink');
-        drink = '' + x + '_' + y;
+        if ($('#xy_' + x + '_' + y).hasClass('snake')) {
+            createDrink(size);
+        }
+        else {
+            $('#xy_' + x + '_' + y).addClass('drink');
+            drink = '' + x + '_' + y;
+        }
+
     }
 
     //Position update function
