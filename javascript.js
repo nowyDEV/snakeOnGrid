@@ -148,8 +148,13 @@ $(document).ready(function () {
 
         //Game running conditions (snake alive ?)
         if (x < 0 || y < 0 || x > (size-1) || y > (size-1) ||  $('#xy_' + newHead).hasClass('snake') ) {
-            alert("Game over, score: " + score);
-            return;
+            if (score === (size*size - 2)) {
+                alert("You've beaten the Game !");
+            }
+            else {
+                alert("Game over, score: " + score);
+                return;
+            }
         }
 
         $('#xy_' + newHead).addClass('snake');
@@ -171,5 +176,5 @@ $(document).ready(function () {
                 dir = 1;
             }
         });
-    
+
 });
